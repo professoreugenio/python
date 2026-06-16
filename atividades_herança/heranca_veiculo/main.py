@@ -1,5 +1,5 @@
-from classCarro import Carro
-from classMoto import Moto
+from atividades_herança.heranca_veiculo.classCarro import Carro
+from atividades_herança.heranca_veiculo.classMoto import Moto
 
 carro1 = Carro("CIVIC","HONDA",2022,4)
 moto1 = Moto("CIVIC","HONDA",2022,4)

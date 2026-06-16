@@ -1,4 +1,4 @@
-from classVeiculos import Veiculo
+from atividades_herança.heranca_veiculo.classVeiculos import Veiculo
 
 class Carro(Veiculo):
     def __init__(self,modelo,marca,ano,portas):
