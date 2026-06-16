@@ -1,9 +1,9 @@
 class Pessoa:
     def __init__(self,nome): #MÉTODO CONSTRUTOR
-        self.__nome = nome #ATRIBUTO
+        self.nome = nome #ATRIBUTO
     @property
     def nome(self):
-        return self.__nome
+        return self.nome
     @nome.setter
     def nome(self,novonome):
         if(novonome==""):
