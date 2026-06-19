@@ -14,15 +14,8 @@ class Vaca:
     def emitir_som(self):
         print(f"Vaca : muuuuu")   
 
-# cachorro = Cachorro();
-# gato = Gato();
-# vaca = Vaca();
 
-# cachorro.emitir_som()
-# gato.emitir_som()
-# vaca.emitir_som()
-
-animais = Animais()
+Animais()
 animais = [Cachorro(),Gato(),Vaca()]
 
 for animal in animais:
