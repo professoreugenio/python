@@ -11,4 +11,4 @@ class Pessoa:
 
 pessoa1 = Pessoa("PAULA")
 pessoa1.__nome = "ANDRÉ"
-print(pessoa1.nome)
+print(pessoa1.__nome)
