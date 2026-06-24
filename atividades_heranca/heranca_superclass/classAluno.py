@@ -1,4 +1,4 @@
-from atividades_herança.heranca_superclass.classPessoa import Pessoa
+from classPessoa import Pessoa
 class Aluno(Pessoa):
     def __init__(self,nome,idade,nota):
        super().__init__(nome,idade)
