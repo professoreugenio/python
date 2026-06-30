@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class BancoAbstrato(ABC):
+class BancoAbstracao(ABC):
 
     @abstractmethod
     def logar(self,senhainput):
@@ -10,32 +10,27 @@ class BancoAbstrato(ABC):
     def exibirsaldo(self):
         pass
 
-class Banco(BancoAbstrato):
+
+
+class Banco(BancoAbstracao):
     def __init__(self,cliente="Maria do Carmo",saldo=2500, senha=1234):
         self.cliente = cliente
         self.saldo = saldo
         self.senha = senha
         self.logado = False
-        
 
     def logar(self,senhainput):
-        
-        
         if (senhainput != self.senha):
             self.logado = False
-            
-           
-            return f"Senha não confere. Tente novamente."
+            return f"Senha não confere. Tente novamente"
         else:
-            
             self.logado = True
             return f"Conectado com sucesso"
-        pass
     def exibirsaldo(self):
         if(self.logado == False):
             return f"Acesso negado para saldo"
         else:
-            self.logado = True
+            self.logado == True
             return f"""
             DADOS D CLIENTE
             Nome {self.cliente}
@@ -44,22 +39,16 @@ class Banco(BancoAbstrato):
 
 cliente = Banco()
 
-
-tentativas = 0
-limitentativas = 4
-while cliente.logado == False and tentativas < limitentativas:
+while cliente.logado == False:
     senha_digitada = input('DIGITE A SENHA:')
-    if(senha_digitada==""):
+    if senha_digitada=="":
         print("Campo não pode estar vazio")
-    elif(senha_digitada.isdigit()==False):
+    elif senha_digitada.isdigit()==False:
         print("Campo não pode letras")
+    elif len(senha_digitada) !=4:
+        print("Senha com 4 dígitos")
     else:
-        tentativas +=1               
         senha_digitada = int(senha_digitada)
-        print(f"Tentativas {tentativas}")
         print(cliente.logar(senha_digitada))
 
-if cliente.logado == True:
-    print(cliente.exibirsaldo())
-else:
-    print("Acesso bloqueado. Limite de tentativas atingido.")
+print(cliente.exibirsaldo())
