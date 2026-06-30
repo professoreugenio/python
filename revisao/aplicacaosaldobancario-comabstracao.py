@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class BancoAbstracao(ABC):
-    pass
+    
 
     @abstractmethod
     def login(self,senhadigitada):
