@@ -1,4 +1,4 @@
-from classPessoa import Pessoa
+from tarik.atividades_heranca.heranca_superclass.classPessoa import Pessoa
 
 class Professor(Pessoa):
     def __init__(self,nome,idade,salario):

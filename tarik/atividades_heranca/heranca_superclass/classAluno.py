@@ -1,4 +1,4 @@
-from classPessoa import Pessoa
+from tarik.atividades_heranca.heranca_superclass.classPessoa import Pessoa
 class Aluno(Pessoa):
     def __init__(self,nome,idade,nota):
        super().__init__(nome,idade)
